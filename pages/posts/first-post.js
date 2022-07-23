@@ -11,11 +11,13 @@ const FirstPost = () => {
             <div className='text-xl font-medium text-black'>
               TailWindCSS Test
             </div>
-            <Link href='/'>
-              <p className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>
-                Home
-              </p>
-            </Link>
+            <div className='flex'>
+              <Link href='/'>
+                <p className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>
+                  Home
+                </p>
+              </Link>
+            </div>
           </div>
         </div>
       </h2>
