@@ -12,10 +12,10 @@ const FirstPost = () => {
       <Head>
         <title>First Post</title>
       </Head>
-      <div className='max-w-lg p-4 mx-12 my-32'>
+      <div className='p-4 mx-12 my-64'>
         <h1 className='text-3xl font-bold underline'>First Post</h1>
         <h2>
-          <div className='p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4'>
+          <div className='p-6 max-w-sm mx-auto bg-slate-700 rounded-xl shadow-lg flex items-center space-x-4'>
             <div className='shrink-0'></div>
             <div>
               <div className='text-xl font-medium text-black'>
@@ -23,7 +23,9 @@ const FirstPost = () => {
               </div>
               <div className='flex'>
                 <Link href='/'>
-                  <p>Home</p>
+                  <p className='font-medium text-blue-600 hover:text-blue-400'>
+                    Back to Home
+                  </p>
                 </Link>
               </div>
             </div>
