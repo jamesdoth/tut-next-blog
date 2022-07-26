@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Home = () => {
@@ -15,23 +14,23 @@ const Home = () => {
           <h1 className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
             Read{' '}
             <Link href='/posts/first-post'>
-              <a className='text-purple-300 hover:text-purple-200'>
-                this page!
-              </a>
+              <a className='text-purple-300 hover:text-blue-300'>this page!</a>
             </Link>
           </h1>
           <p className='text-2xl text-gray-700'>
-            Get started by editing <code>pages/index.js</code>
+            This is a Next.js sandbox. Links have no consistent design.
           </p>
           <div className='grid grid-cols-1 grid-rows-3 lg:grid-rows-2 md:grid-rows-2 justify-center items-center lg:grid-cols-2 md:grid-cols-2 gap-3 mt-3 pt-3 w-full lg:w-2/3 md:w-full'>
-            <div className='hover:scale-105 cursor-pointer duration-500 flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6'>
-              <a href='https://nextjs.org/docs'>
-                <h2 className='text-lg text-gray-700'>Documentation &rarr;</h2>
-                <p className='text-sm text-gray-600'>
-                  Find in-depth information about Next.js features and API.
-                </p>
-              </a>
-            </div>
+            <Link href='/blog-layout'>
+              <div className='hover:scale-105 cursor-pointer duration-500 flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6'>
+                <a>
+                  <h2 className='text-lg text-gray-700'>Blog Layout &rarr;</h2>
+                  <p className='text-sm text-gray-600'>
+                    Next.js documentation blog tutorial layout.
+                  </p>
+                </a>
+              </div>
+            </Link>
             <div className='hover:scale-105 cursor-pointer duration-500 flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6'>
               <a href='https://nextjs.org/learn' className=''>
                 <h2 className='text-lg text-gray-700'>Learn &rarr;</h2>

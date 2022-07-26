@@ -1,10 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Head from 'next/head';
-
-const YourComponent = () => (
-  <Image src='/public/profile.jpg' height={144} width={144} alt='Jimbo' />
-);
 
 const FirstPost = () => {
   return (
@@ -22,7 +17,7 @@ const FirstPost = () => {
               <div className='text-lg text-gray-700'>TailWindCSS Test</div>
               <div className='flex'>
                 <Link href='/'>
-                  <p className='cursor-pointer text-sm text-blue-500 hover:text-blue-400'>
+                  <p className='cursor-pointer text-sm text-blue-400 hover:text-purple-300'>
                     Back to Home &larr;
                   </p>
                 </Link>
