@@ -11,7 +11,7 @@ const Home = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <div className='w-screen min-h-screen flex flex-col justify-center items-center p-4 overflow-y-scroll'>
+        <div className='w-screen min-h-screen flex flex-col justify-center -my-6 items-center p-4 overflow-y-scroll'>
           <h1 className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
             Read{' '}
             <Link href='/posts/first-post'>
@@ -23,7 +23,6 @@ const Home = () => {
           <p className='text-2xl text-gray-700'>
             Get started by editing <code>pages/index.js</code>
           </p>
-
           <div className='grid grid-cols-1 grid-rows-3 lg:grid-rows-2 md:grid-rows-2 justify-center items-center lg:grid-cols-2 md:grid-cols-2 gap-3 mt-3 pt-3 w-full lg:w-2/3 md:w-full'>
             <div className='hover:scale-105 cursor-pointer duration-500 flex flex-col justify-center items-center text-center rounded shadow-xl border-2 border-gray-500 h-full w-full p-6'>
               <a href='https://nextjs.org/docs'>
@@ -67,18 +66,6 @@ const Home = () => {
           </div>
         </div>
       </main>
-      <footer className=''>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <span className=''>
-            <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </>
   );
 };
