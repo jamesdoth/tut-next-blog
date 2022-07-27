@@ -2,71 +2,56 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const name = 'Your Name';
-const siteTitle = 'Next.js Sample Website';
+const name = 'Ghostly';
 
-const Layout = ({ children, home }) => {
+const Layout = () => {
   return (
-    <div className=''>
+    <>
       <Head>
-        <link rel='icon' href='/favicon.ico' />
-        <meta
-          name='description'
-          content='Learn how to build a personal website using Next.js'
-        />
-        <meta
-          property='og:image'
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name='og:title' content={siteTitle} />
-        <meta name='twitter:card' content='summary_large_image' />
+        <title>Blog Layout</title>
       </Head>
-      <header className=''>
-        {home ? (
-          <>
-            <Image
-              priority
-              src='/images/profile.jpg'
-              className=''
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className=''>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href='/'>
-              <a>
-                <Image
-                  priority
-                  src='/images/profile.jpg'
-                  className=''
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className=''>
-              <Link href='/'>
-                <a className=''>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className=''>
+      {/* w-screen min-h-screen flex flex-col justify-center -my-6 items-center p-4 overflow-y-scroll */}
+      <div className='flex flex-col justify-center items-center p-6'>
+        <header className='flex flex-col items-center'>
           <Link href='/'>
-            <a>← Back to home</a>
+            <a>
+              <Image
+                priority
+                src='/profile.jpg'
+                className='rounded-full'
+                height={108}
+                width={108}
+                alt={name}
+              />
+            </a>
           </Link>
-        </div>
-      )}
-    </div>
+          <h1 className='text-4xl font-medium text-center my-6'>{name}</h1>
+        </header>
+        <main>
+          <div>
+            <div className=''>
+              <p className='text-xl font-small my-3'>
+                Hello, This is Ghostly. A placeholder for some text. I am the
+                general of this blog. Please see associated links
+              </p>
+            </div>
+            <div className=''>
+              <p className='text-xl font-small'>
+                (This is a sample website - you&apos;ll be building a site like
+                this one{' '}
+                <a
+                  className='cursor-pointer text-blue-400 hover:text-purple-300'
+                  href='https://nextjs.org/learn'
+                >
+                  our Next.js tutorial
+                </a>
+                )
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </>
   );
 };
 
