@@ -25,7 +25,9 @@ const Layout = () => {
               />
             </a>
           </Link>
-          <h1 className='text-4xl font-medium text-center my-6'>{name}</h1>
+          <h1 className='text-gray-700 text-4xl font-medium text-center my-6'>
+            {name}
+          </h1>
         </header>
         <main>
           <div>
