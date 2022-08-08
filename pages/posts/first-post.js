@@ -7,6 +7,7 @@ const FirstPost = () => {
       <Head>
         <title>First Post</title>
       </Head>
+
       <div className='w-screen min-h-screen flex flex-col justify-center -my-6 items-center p-4 overflow-y-scroll'>
         <h1 className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold text-gray-700'>
           First <a className='text-purple-300'>Post</a>

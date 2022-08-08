@@ -1,7 +1,17 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { getSortedPostsData } from '../lib/posts';
 
-const Home = () => {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+const Home = ({ allPostsData }) => {
   return (
     <>
       <Head>
@@ -65,6 +75,20 @@ const Home = () => {
           </div>
         </div>
       </main>
+      <section>
+        <h2>Blog</h2>
+        <ul>
+          {allPostsData.map(({ id, date, title }) => (
+            <li key={id}>
+              {title}
+              <br />
+              {id}
+              <br />
+              {date}
+            </li>
+          ))}
+        </ul>
+      </section>
     </>
   );
 };
